@@ -28,7 +28,7 @@ Graficzny symulator procesora x86 umożliwiający wykonywanie podstawowych opera
 * .NET
 * WinForms
 
-## ▶️ How to run
+## ▶️ Jak otworzyć
 
 1. Sklonuj repozytorium:
 
@@ -51,7 +51,7 @@ Aplikacja symuluje podstawowe mechanizmy działania procesora x86:
 
 Instrukcje wykonywane są krok po kroku, a ich przebieg zapisywany jest w historii operacji.
 
-## 💡 What I learned
+## 💡 Czego sie nauczyłem
 
 * implementacja logiki niskopoziomowej (symulacja CPU)
 * zarządzanie stanem aplikacji
