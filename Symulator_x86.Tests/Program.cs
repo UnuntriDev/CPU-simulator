@@ -15,6 +15,7 @@ namespace Symulator_x86.Tests
                 XchgSwapsValues();
                 PushAndPopRegisterRoundTrip();
                 PushAndPopMemoryRoundTrip();
+                PopIntoStackPointerUsesPoppedValue();
                 PopFromEmptyStackThrows();
                 EffectiveAddressWrapsToWord();
                 MemoryDistinguishesUninitializedFromZero();
@@ -83,6 +84,18 @@ namespace Symulator_x86.Tests
 
             AssertEqual((ushort)0xBEEF, cpu.ReadMem(0x3000), nameof(PushAndPopMemoryRoundTrip));
             AssertTrue(cpu.IsMemoryInitialized(0x3000), nameof(PushAndPopMemoryRoundTrip));
+        }
+
+        private static void PopIntoStackPointerUsesPoppedValue()
+        {
+            var cpu = new Cpu();
+            cpu[Register.AX] = 0x3456;
+
+            cpu.Push(Operand.AX, 0);
+            var value = cpu.Pop(Operand.SP, 0);
+
+            AssertEqual((ushort)0x3456, value, nameof(PopIntoStackPointerUsesPoppedValue));
+            AssertEqual((ushort)0x3456, cpu[Register.SP], nameof(PopIntoStackPointerUsesPoppedValue));
         }
 
         private static void PopFromEmptyStackThrows()

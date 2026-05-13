@@ -1,6 +1,9 @@
 .vs/
 bin/
 obj/
+/*.exe
+/*.pdb
+/*.config
 *.user
 *.suo
 *.cache

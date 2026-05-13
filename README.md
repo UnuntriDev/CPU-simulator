@@ -74,7 +74,7 @@ Aplikacja symuluje podstawowe mechanizmy działania procesora x86:
 
 Instrukcje wykonywane są krok po kroku, a ich przebieg zapisywany jest w historii operacji.
 
-## 💡 Czego sie nauczyłem
+## 💡 Czego się nauczyłem
 
 * implementacja logiki niskopoziomowej (symulacja CPU)
 * zarządzanie stanem aplikacji

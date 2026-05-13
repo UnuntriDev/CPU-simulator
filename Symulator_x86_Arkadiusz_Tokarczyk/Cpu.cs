@@ -69,8 +69,8 @@ namespace Symulator_x86
             var sp = this[Register.SP];
             if (!TryReadMem(sp, out var val))
                 throw new InvalidOperationException("Stos jest pusty.");
-            SetOperand(dst, ea, val);
             this[Register.SP] = (ushort)((sp + 2) & 0xFFFF);
+            SetOperand(dst, ea, val);
             return val;
         }
 
