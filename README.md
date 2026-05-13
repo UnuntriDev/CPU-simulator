@@ -28,6 +28,7 @@ Graficzny symulator procesora x86 umożliwiający wykonywanie podstawowych opera
 * .NET Framework 4.7.2
 * WinForms
 * Visual Studio 2022
+* SDK-style project files
 
 ## 📁 Struktura projektu
 
