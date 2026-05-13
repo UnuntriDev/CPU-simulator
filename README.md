@@ -27,13 +27,14 @@ Graficzny symulator procesora x86 umożliwiający wykonywanie podstawowych opera
 * C#
 * .NET Framework 4.7.2
 * WinForms
+* xUnit v3
 * Visual Studio 2022
 * SDK-style project files
 
 ## 📁 Struktura projektu
 
 * `Symulator_x86_Arkadiusz_Tokarczyk` - aplikacja WinForms
-* `Symulator_x86.Tests` - prosty runner testów logiki CPU
+* `Symulator_x86.Tests` - testy jednostkowe logiki CPU w xUnit
 * `Cpu.cs` - rejestry, pamięć, stos i wykonywanie instrukcji
 * `Operand.cs` - definicje rejestrów i operandów
 
@@ -51,17 +52,21 @@ Graficzny symulator procesora x86 umożliwiający wykonywanie podstawowych opera
 
 ## ✅ Jak uruchomić testy
 
-W Visual Studio zbuduj całe rozwiązanie, a następnie uruchom projekt:
+W Visual Studio otwórz Test Explorer i uruchom testy z projektu:
 
 ```text
 Symulator_x86.Tests
 ```
 
-Możesz też uruchomić test runner z katalogu projektu po zbudowaniu rozwiązania:
+Możesz też uruchomić testy z katalogu projektu:
 
 ```powershell
-.\Symulator_x86.Tests\bin\Debug\net472\Symulator_x86.Tests.exe
+dotnet test .\Symulator_x86.Tests\Symulator_x86.Tests.csproj
 ```
+
+## 📦 Gotowa aplikacja
+
+Gotowe paczki aplikacji są publikowane w GitHub Releases po wypchnięciu taga w formacie `v*`, np. `v1.0.0`.
 
 ## 🧠 Jak działa
 
