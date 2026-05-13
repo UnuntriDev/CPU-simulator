@@ -33,7 +33,7 @@ Graficzny symulator procesora x86 umożliwiający wykonywanie podstawowych opera
 
 ## 📁 Struktura projektu
 
-* `Symulator_x86_Arkadiusz_Tokarczyk` - aplikacja WinForms
+* `Symulator_x86` - aplikacja WinForms
 * `Symulator_x86.Tests` - testy jednostkowe logiki CPU w xUnit
 * `Cpu.cs` - rejestry, pamięć, stos i wykonywanie instrukcji
 * `Operand.cs` - definicje rejestrów i operandów
@@ -46,7 +46,7 @@ Graficzny symulator procesora x86 umożliwiający wykonywanie podstawowych opera
    git clone https://github.com/UnuntriDev/CPU-simulator.git
    ```
 
-2. Otwórz plik `Symulator_x86_Arkadiusz_Tokarczyk.sln` w Visual Studio
+2. Otwórz plik `Symulator_x86.sln` w Visual Studio
 
 3. Uruchom aplikację (F5)
 

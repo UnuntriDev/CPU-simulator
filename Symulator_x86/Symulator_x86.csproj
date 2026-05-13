@@ -4,7 +4,7 @@
     <TargetFramework>net472</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <RootNamespace>Symulator_x86</RootNamespace>
-    <AssemblyName>Symulator_x86_Arkadiusz_Tokarczyk</AssemblyName>
+    <AssemblyName>Symulator_x86</AssemblyName>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <LangVersion>latest</LangVersion>

@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Symulator_x86_Arkadiusz_Tokarczyk\Symulator_x86_Arkadiusz_Tokarczyk.csproj" />
+    <ProjectReference Include="..\Symulator_x86\Symulator_x86.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -26,7 +26,7 @@ jobs:
         uses: microsoft/setup-msbuild@v2
 
       - name: Restore and build
-        run: msbuild Symulator_x86_Arkadiusz_Tokarczyk.sln /restore /p:Configuration=Debug /p:Platform="Any CPU"
+        run: msbuild Symulator_x86.sln /restore /p:Configuration=Debug /p:Platform="Any CPU"
 
       - name: Run CPU tests
         run: dotnet test .\Symulator_x86.Tests\Symulator_x86.Tests.csproj --configuration Debug --no-build
@@ -35,12 +35,12 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v')
         shell: pwsh
         run: |
-          msbuild Symulator_x86_Arkadiusz_Tokarczyk.sln /restore /p:Configuration=Release /p:Platform="Any CPU"
-          $source = "Symulator_x86_Arkadiusz_Tokarczyk\bin\Release\net472"
+          msbuild Symulator_x86.sln /restore /p:Configuration=Release /p:Platform="Any CPU"
+          $source = "Symulator_x86\bin\Release\net472"
           $staging = Join-Path $env:RUNNER_TEMP "CPU-simulator"
           New-Item -ItemType Directory -Force -Path $staging | Out-Null
-          Copy-Item "$source\Symulator_x86_Arkadiusz_Tokarczyk.exe" $staging
-          Copy-Item "$source\Symulator_x86_Arkadiusz_Tokarczyk.exe.config" $staging -ErrorAction SilentlyContinue
+          Copy-Item "$source\Symulator_x86.exe" $staging
+          Copy-Item "$source\Symulator_x86.exe.config" $staging -ErrorAction SilentlyContinue
           Compress-Archive -Path "$staging\*" -DestinationPath "CPU-simulator-${{ github.ref_name }}.zip" -Force
 
       - name: Upload release artifact

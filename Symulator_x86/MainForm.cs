@@ -146,7 +146,7 @@ namespace Symulator_x86
 
             this.Controls.Add(new Label
             {
-                Text = "Created by: Arkadiusz Tokarczyk",
+                Text = "Created by: UnuntriDev",
                 AutoSize = true,
                 Location = new Point(715, 510),
                 Font = new Font("Segoe UI", 9F, FontStyle.Italic),

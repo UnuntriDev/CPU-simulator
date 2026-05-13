@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36804.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symulator_x86_Arkadiusz_Tokarczyk", "Symulator_x86_Arkadiusz_Tokarczyk\Symulator_x86_Arkadiusz_Tokarczyk.csproj", "{EBAB012B-5213-4776-92E7-039BDC9B0A28}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symulator_x86", "Symulator_x86\Symulator_x86.csproj", "{EBAB012B-5213-4776-92E7-039BDC9B0A28}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symulator_x86.Tests", "Symulator_x86.Tests\Symulator_x86.Tests.csproj", "{7F1E5C8D-620E-4D21-A3A6-1AC12C92C3D8}"
 EndProject
