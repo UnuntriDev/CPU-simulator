@@ -1,0 +1,27 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Restore and build
+        run: msbuild Symulator_x86_Arkadiusz_Tokarczyk.sln /restore /p:Configuration=Debug /p:Platform="Any CPU"
+
+      - name: Run CPU tests
+        run: .\Symulator_x86.Tests\bin\Debug\net472\Symulator_x86.Tests.exe

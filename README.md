@@ -1,6 +1,6 @@
 # CPU Simulator
 
-CPU simulator implementing instruction execution, registers, and memory management in C#.
+CPU simulator implementing basic instruction execution, registers, stack operations, and memory addressing in C#.
 
 Graficzny symulator procesora x86 umożliwiający wykonywanie podstawowych operacji na rejestrach oraz pamięci.
 
@@ -25,8 +25,16 @@ Graficzny symulator procesora x86 umożliwiający wykonywanie podstawowych opera
 ## 🛠️ Technologie
 
 * C#
-* .NET
+* .NET Framework 4.7.2
 * WinForms
+* Visual Studio 2022
+
+## 📁 Struktura projektu
+
+* `Symulator_x86_Arkadiusz_Tokarczyk` - aplikacja WinForms
+* `Symulator_x86.Tests` - prosty runner testów logiki CPU
+* `Cpu.cs` - rejestry, pamięć, stos i wykonywanie instrukcji
+* `Operand.cs` - definicje rejestrów i operandów
 
 ## ▶️ Jak otworzyć
 
@@ -36,9 +44,23 @@ Graficzny symulator procesora x86 umożliwiający wykonywanie podstawowych opera
    git clone https://github.com/UnuntriDev/CPU-simulator.git
    ```
 
-2. Otwórz projekt w Visual Studio
+2. Otwórz plik `Symulator_x86_Arkadiusz_Tokarczyk.sln` w Visual Studio
 
 3. Uruchom aplikację (F5)
+
+## ✅ Jak uruchomić testy
+
+W Visual Studio zbuduj całe rozwiązanie, a następnie uruchom projekt:
+
+```text
+Symulator_x86.Tests
+```
+
+Możesz też uruchomić test runner z katalogu projektu po zbudowaniu rozwiązania:
+
+```powershell
+.\Symulator_x86.Tests\bin\Debug\net472\Symulator_x86.Tests.exe
+```
 
 ## 🧠 Jak działa
 
@@ -46,6 +68,7 @@ Aplikacja symuluje podstawowe mechanizmy działania procesora x86:
 
 * operacje na rejestrach
 * stos (PUSH/POP)
+* rozróżnienie pamięci niezainicjalizowanej od komórki zapisanej wartością `0000`
 * adresowanie pamięci z wykorzystaniem baz, indeksów i przesunięcia
 * obliczanie efektywnego adresu (EA)
 
